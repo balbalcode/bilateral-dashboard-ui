@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/styles.min.css">
+    <link rel="stylesheet" href="../dist/css/tailwind.css">
+
+    <!-- Start ChartJS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
+        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
+    <!-- End ChartJS Library -->
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="../vendor/jQuery/jquery-3.4.1.min.js"></script>
+
+    <title>BILATERAL</title>
+</head>
+
+<body>
+    <div class="main-layout">
+        <!-- Start Main Sidebar -->
+        <div class="main-sidebar bg-dark">
+            <div class="main-sidebar-head">
+                <div class="main-sidebar__icon"></div>
+                <div class="main-sidebar__title font-proxima-bold text-lg text-white uppercase">
+                    Bilateral
+                </div>
+            </div>
+            <div class="main-sidebar-menu">
+                <div class="main-sidebar-menu__item">
+                    <p class="main-sidebar-menu__title">Dashboard</p>
+                    <ul>
+                        <li>
+                            <a href="table-makro.html">
+                                <i class="bilateral-icon office"></i>
+                                <span>Data Makro APBN</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./outstanding/index.html">
+                                <i class="bilateral-icon graph"></i>
+                                <span>Data Outstanding Utang</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="bilateral-icon handshake active"></i>
+                                <span>Portofolio Proyek Bilateral</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="segrakan/index.html">
+                                <i class="bilateral-icon segrakan"></i>
+                                <span>Segrakan</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-sidebar-menu__item">
+                    <p class="main-sidebar-menu__title">Master Data</p>
+                    <ul>
+                        <li>
+                            <a href="#">Program</a>
+                        </li>
+                        <li>
+                            <a href="#">Bidang</a>
+                        </li>
+                        <li>
+                            <a href="#">Kementrian / Lembaga</a>
+                        </li>
+                        <li>
+                            <a href="#">Cluster</a>
+                        </li>
+                        <li>
+                            <a href="#">Lender</a>
+                        </li>
+                        <li>
+                            <a href="#">Status Proyek</a>
+                        </li>
+                        <li>
+                            <a href="#">Lokasi</a>
+                        </li>
+                        <li>
+                            <a href="#">Kurs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Sidebar -->
+        <!-- Start Main Content -->
+        <div class="main-content">
+            <!-- Start Navbar -->
+            <div class="main-header">
+                <div class="main-header-title font-proxima-bold text-default">Portofolio Proyek Bilateral</div>
+                <div class="main-header-menu main-header-menu--right">
+                    <div class="main-header-menu__item border-r border-l border-soft-gray h-full">
+                        <div class="form-search form-input-group h-full">
+                            <div class="form-input-group-prepend">
+                                <div class="input-group-text border-none">
+                                    <i class="bilateral-icon search"></i>
+                                </div>
+                                <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header-menu__item">
+                        <div class="dropdown cursor-pointer">
+                            <div class="dropdown-button has-icon">
+                                <img src="../assets/images/user.svg" class="main-header__profile-image" />
+                            </div>
+                            <div class="dropdown-content">
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar -->
+            <!-- Start Content Page -->
+            <div class="main-body">
+                <div class="container container--with-background pb-56">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <p class="text-white font-proxima-semi-bold">Total Proyek</p>
+                            <p class="text-white font-proxima-bold text-5xl">USD 17,410,974</p>
+                            <p class="text-white opacity-75">98 Proyek</p>
+                        </div>
+                        <div class="flex">
+                            <a href="form.html" class="btn btn-white font-proxima-bold mr-3">
+                                Detail Data Proyek
+                            </a>
+                            <button type="button" class="btn btn-secondary font-proxima-bold btn-modal"
+                                data-target="formModal">
+                                Tambah Proyek
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mt-40">
+                    <div class="container">
+                        <div class="grid grid-cols-3 gap-8">
+                            <div class="card">
+                                <a href="table.html">
+                                    <div class="card-body">
+                                        <div class="flex items-center">
+                                            <div class="w-10">
+                                                <img src="./../assets/icons/ic-wait.svg" />
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-sm mb-1">Blue Book</p>
+                                                <p class="text-gray text-xs">USD 23.240.194.319 • 20 Proyek</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a href="table.html">
+                                    <div class="card-body">
+                                        <div class="flex items-center">
+                                            <div class="w-10">
+                                                <img src="./../assets/icons/ic-paper.svg" />
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-sm mb-1">RC/FS</p>
+                                                <p class="text-gray text-xs">USD 584,217 • 20 Proyek</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a href="table.html">
+                                    <div class="card-body">
+                                        <div class="flex items-center">
+                                            <div class="w-10">
+                                                <img src="./../assets/icons/ic-book.svg" />
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-sm mb-1">Sudah Terdapat RC</p>
+                                                <p class="text-gray text-xs">USD 584,217 • 20 Proyek</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a href="table.html">
+                                    <div class="card-body">
+                                        <div class="flex items-center">
+                                            <div class="w-10">
+                                                <img src="./../assets/icons/ic-notes.svg" />
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-sm mb-1">Daftar Kegiatan</p>
+                                                <p class="text-gray text-xs">USD 366.016.000 • 20 Proyek</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a href="table.html">
+                                    <div class="card-body">
+                                        <div class="flex items-center">
+                                            <div class="w-10">
+                                                <img src="./../assets/icons/ic-wrench.svg" />
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-sm mb-1">Implementasi</p>
+                                                <p class="text-gray text-xs">USD 584,217 • 20 Proyek</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a href="table.html">
+                                    <div class="card-body">
+                                        <div class="flex items-center">
+                                            <div class="w-10">
+                                                <img src="./../assets/icons/ic-check.svg" />
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-sm mb-1">Selesai</p>
+                                                <p class="text-gray text-xs">USD 584,217 • 20 Proyek</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-8">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-header__title">Ringkasan Jumlah Proyek</div>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="chart-project-count" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-header__title">Ringkasan Nilai Proyek (USD)</div>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="chart-project-value" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Content Page -->
+        </div>
+        <!-- End Main Content -->
+
+        <!-- Start Modal -->
+        <div id="formModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-close"></div>
+                <div class="modal-head">
+                    <div class="modal-head__title">Tambah Proyek</div>
+                </div>
+                <div class="modal-body">
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="form-group">
+                            <p class="form-text">Kode</p>
+                            <input type="text" class="form-input form-input-md" placeholder="Masukkan kode">
+                        </div>
+                        <div class="form-group">
+                            <p class="form-text">Bidang</p>
+                            <select name="bidang" class="form-select form-select-md">
+                                <option value="">Pilih Bidang</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="form-group">
+                            <p class="form-text">Program</p>
+                            <input type="text" class="form-input form-input-md" placeholder="Masukkan program">
+                        </div>
+                        <div class="form-group">
+                            <p class="form-text">Cluster</p>
+                            <select name="cluster" class="form-select form-select-md">
+                                <option value="">Pilih Cluster</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="form-text">Nama Proyek</p>
+                        <input type="text" class="form-input form-input-md" placeholder="Masukkan nama proyek">
+                    </div>
+                    <div class="form-group">
+                        <p class="form-text">Nama Proyek BB</p>
+                        <input type="text" class="form-input form-input-md" placeholder="Masukkan nama proyek">
+                    </div>
+                    <div class="form-group">
+                        <p class="form-text">Tahun BB</p>
+                        <div class="grid grid-cols-2 gap-5">
+                            <select name="tahun_mulai" class="form-select form-select-md">
+                                <option value="">Tahun Mulai</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                            </select>
+                            <select name="tahun_akhir" class="form-select form-select-md">
+                                <option value="">Tahun Akhir</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="form-group">
+                            <p class="form-text">Nilai Pinjaman</p>
+                            <div class="form-input-group-prepend">
+                                <div class="input-group-button">$</div>
+                                <input type="text" class="form-input form-input-md"
+                                    placeholder="Masukkan nilai pinjaman">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-text">Nilai Pendamping</p>
+                            <div class="form-input-group-prepend">
+                                <div class="input-group-button">Rp</div>
+                                <input type="text" class="form-input form-input-md"
+                                    placeholder="Masukkan nilai pendamping">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-solid border-soft-gray -mx-4 px-4">
+                        <p class="text-sm font-proxima-bold my-5">Lokasi</p>
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="form-group">
+                                <p class="form-text">Jangkauan</p>
+                                <select name="jangkauan" class="form-select form-select-md">
+                                    <option value="">Pilih Jangkauan</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <p class="form-text">Nama Lokasi</p>
+                                <input type="text" class="form-input form-input-md" placeholder="Masukkan nama lokasi">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="form-group">
+                                <p class="form-text">Provinsi</p>
+                                <input type="text" class="form-input form-input-md"
+                                    placeholder="Masukkan nama provinsi">
+                            </div>
+                            <div class="form-group">
+                                <p class="form-text">Kota</p>
+                                <input type="text" class="form-input form-input-md" placeholder="Masukkan nama kota">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-solid border-soft-gray -mx-4 px-4 pt-5">
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="form-group">
+                                <p class="form-text">Lender</p>
+                                <select name="lender" class="form-select form-select-md">
+                                    <option value="">Pilih Lender</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <p class="form-text">Status</p>
+                                <select name="status" class="form-select form-select-md">
+                                    <option value="">Pilih Status</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-text">Ruang Lingkup</p>
+                            <input type="text" class="form-input form-input-md" placeholder="Masukkan ruang lingkup">
+                        </div>
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="form-group">
+                                <p class="form-text">Nomor Registrasi</p>
+                                <input type="text" class="form-input form-input-md"
+                                    placeholder="Masukkan nomor registrasi">
+                            </div>
+                            <div class="form-group">
+                                <p class="form-text">Nilai Pinjaman Valas</p>
+                                <input type="text" class="form-input form-input-md"
+                                    placeholder="Masukkan nilai pinjaman valas">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="form-group">
+                                <p class="form-text">Mata Uang</p>
+                                <input type="text" class="form-input form-input-md" placeholder="Masukkan mata uang">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="flex justify-end">
+                        <div>
+                            <button type="button" class="btn btn-secondary font-proxima-bold">
+                                Simpan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+    </div>
+
+    <script src="../dist/js/page-index.js"></script>
+    <script src="../dist/js/components.js"></script>
+</body>
+
+</html>

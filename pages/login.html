@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Regular Datatables CSS-->
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+    <!--Responsive Extension Datatables CSS-->
+    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../dist/css/styles.min.css">
+    <link rel="stylesheet" href="../dist/css/tailwind.css">
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="../vendor/jQuery/jquery-3.4.1.min.js"></script>
+
+    <title>BILATERAL</title>
+</head>
+
+<body class="overflow-hidden">
+<div class="absolute w-full z-10">
+    <div class="mx-auto z-10">
+        <div class="container mx-auto py-12">
+            <div class="w-4/6 mx-auto py-">
+                <div class="w-full mx-auto text-center">
+                    <img src="../assets/images/logo.png" class="w-24 mx-auto" alt="logo-bppn">
+                    <p class="italic font-proxima-bold text-dark text-2xl z-20 mt-2">Kementrian PPN /
+                        Bappenas</p>
+                </div>
+            </div>
+            <div class="w-1/2 mx-auto">
+                <div class="card mt-8 cursor-pointer">
+                    <div class="card-body">
+                        <div class="flex items-center">
+                            <div class="w-10">
+                                <i class="bilateral-icon login-sso"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-proxima-bold text-sm mb-1">Login dengan SSO Bappenas</p>
+                                <p class="text-gray text-xs">Untuk Karyawan Bappenas</p>
+                            </div>
+                            <div class="w-10 text-center">
+                                <i class="fa-chevron-right fa"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="./login_form.html">
+                    <div class="card mt-8 cursor-pointer">
+                        <div class="card-body">
+                            <div class="flex items-center">
+                                <div class="w-10">
+                                    <i class="bilateral-icon login-common"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="font-proxima-bold text-sm mb-1">Login dengan Username dan Password</p>
+                                    <p class="text-gray text-xs">Untuk Mitra / Kementrian & Lembaga</p>
+                                </div>
+                                <div class="w-10 text-center">
+                                    <i class="fa-chevron-right fa"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-full z-0">
+    <div class="bg-transparent z-0 h-64 py-40" style="content: ''"></div>
+    <div class="container--with-background z-0 h-full py-64" style="content: ''"></div>
+</div>
+
+<!--Datatables -->
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+<script src="../dist/js/page-table.js"></script>
+<script src="../dist/js/components.js"></script>
+</body>
+
+</html>

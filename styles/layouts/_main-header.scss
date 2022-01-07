@@ -1,0 +1,47 @@
+.main-header {
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 0 0 #DDDDDD;
+  display: flex;
+  min-height: 52px;
+  padding: 16px 37px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  max-width: 80%;
+  margin: 0 0 0 auto;
+  z-index: 99;
+
+  .form-search input {
+    width: 200px;
+  }
+}
+
+.main-header .main-header-menu {
+  display: flex;
+  flex: 1;
+
+  &--right {
+    position: absolute;
+    right: 37px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 17px;
+    }
+
+    .dropdown-content {
+      left: -100px;
+    }
+  }
+}
+
+.main-header__profile-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}

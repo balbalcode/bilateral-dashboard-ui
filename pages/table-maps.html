@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../dist/css/styles.min.css">
+    <link rel="stylesheet" href="../dist/css/tailwind.css">
+
+    <!-- Google Maps -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiCXelWIfNwqXZAHCoJeianBuSQUn4M7w&callback=initMap"
+        defer></script>
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="../vendor/jQuery/jquery-3.4.1.min.js"></script>
+
+    <script src="../dist/js/page-maps.js"></script>
+
+    <title>BILATERAL</title>
+</head>
+
+<body>
+    <div class="main-layout">
+        <!-- Start Main Sidebar -->
+        <div class="main-sidebar bg-dark">
+            <div class="main-sidebar-head">
+                <div class="main-sidebar__icon"></div>
+                <div class="main-sidebar__title font-proxima-bold text-lg text-white uppercase">
+                    Bilateral
+                </div>
+            </div>
+            <div class="main-sidebar-menu">
+                <div class="main-sidebar-menu__item">
+                    <p class="main-sidebar-menu__title">Dashboard</p>
+                    <ul>
+                        <li>
+                            <a href="table-makro.html">
+                                <i class="bilateral-icon office"></i>
+                                <span>Data Makro APBN</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./outstanding/index.html">
+                                <i class="bilateral-icon graph"></i>
+                                <span>Data Outstanding Utang</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="bilateral-icon handshake"></i>
+                                <span>Portofolio Proyek Bilateral</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="segrakan/index.html">
+                                <i class="bilateral-icon segrakan"></i>
+                                <span>Segrakan</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-sidebar-menu__item">
+                    <p class="main-sidebar-menu__title">Master Data</p>
+                    <ul>
+                        <li>
+                            <a href="#">Program</a>
+                        </li>
+                        <li>
+                            <a href="#">Bidang</a>
+                        </li>
+                        <li>
+                            <a href="#">Kementrian / Lembaga</a>
+                        </li>
+                        <li>
+                            <a href="#">Cluster</a>
+                        </li>
+                        <li>
+                            <a href="#">Lender</a>
+                        </li>
+                        <li>
+                            <a href="#">Status Proyek</a>
+                        </li>
+                        <li>
+                            <a href="#">Lokasi</a>
+                        </li>
+                        <li>
+                            <a href="#">Kurs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Sidebar -->
+        <!-- Start Main Content -->
+        <div class="main-content">
+            <!-- Start Navbar -->
+            <div class="main-header">
+                <div class="main-header-title font-proxima-bold text-default">Portofolio Proyek Bilateral</div>
+                <div class="main-header-menu main-header-menu--right">
+                    <div class="main-header-menu__item border-r border-l border-soft-gray h-full">
+                        <div class="form-search form-input-group h-full">
+                            <div class="form-input-group-prepend">
+                                <div class="input-group-text border-none">
+                                    <i class="bilateral-icon search"></i>
+                                </div>
+                                <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header-menu__item">
+                        <div class="dropdown cursor-pointer">
+                            <div class="dropdown-button has-icon">
+                                <img src="../assets/images/user.svg" class="main-header__profile-image" />
+                            </div>
+                            <div class="dropdown-content">
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar -->
+            <!-- Start Content Page -->
+            <div class="main-body">
+                <section class="section--with-padding">
+                    <div class="card">
+                        <div class="card-header bg-light-gray pb-2">
+                            <div class="card-header__title">Detail Data</div>
+                            <div class="flex my-4">
+                                <div class="flex-1">
+                                    <div class="tab-rounded">
+                                        <a href="table.html" class="tab-rounded__item">Tabel</a>
+                                        <a href="table-stats.html" class="tab-rounded__item">Grafik</a>
+                                        <a href="table-maps.html" class="tab-rounded__item active">Peta</a>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex pr-3">
+                                        <div class="form-input-group">
+                                            <div class="form-input-group-append">
+                                                <input type="text" class="form-input" placeholder="Cari...">
+                                                <div class="input-group-text">
+                                                    <i class="bilateral-icon search-gray"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex pr-3">
+                                        <div class="dropdown">
+                                            <button type="button"
+                                                class="btn btn-default p-2 text-soft-gray dropdown-button">
+                                                <i class="bilateral-icon sort"></i>
+                                            </button>
+                                            <div class="dropdown-content">
+                                                <p class="text-xs uppercase tracking-wider mb-3">Urutkan</p>
+                                                <div class="mb-2 accordion open">
+                                                    <p class="text-xs font-proxima-semi-bold accordion-button">Nama
+                                                        Proyek</p>
+                                                    <div class="accordion-content">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>A-Z</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>Z-A</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 accordion">
+                                                    <p class="text-xs font-proxima-semi-bold accordion-button">Nilai
+                                                        Pinjaman</p>
+                                                    <div class="accordion-content">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>A-Z</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>Z-A</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 accordion">
+                                                    <p class="text-xs font-proxima-semi-bold accordion-button">Lender
+                                                    </p>
+                                                    <div class="accordion-content">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>A-Z</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>Z-A</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion">
+                                                    <p class="text-xs font-proxima-semi-bold accordion-button">KL</p>
+                                                    <div class="accordion-content">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>A-Z</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-group-checkbox">
+                                                                    <input type="checkbox" class="form-checkbox">
+                                                                    <span>Z-A</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex pr-3">
+                                        <div class="dropdown">
+                                            <button type="button"
+                                                class="btn btn-default p-2 text-soft-gray dropdown-button">
+                                                <i class="bilateral-icon eye"></i>
+                                            </button>
+                                            <div class="dropdown-content">
+                                                <p class="text-xs uppercase tracking-wider mb-2">Lihat Kolom</p>
+                                                <ul>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Kode</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Nama Proyek</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Status</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Bidang</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>KL</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Program</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Cluster</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Lender</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Nilai valas</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Nilai ekivalen USD</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Nilai Rp</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Lokasi</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Ruang Lingkup</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Tanggal A</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Tanggal Efektif</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Tanggal Closing</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-group-checkbox">
+                                                            <input type="checkbox" class="form-checkbox">
+                                                            <span>Keterangan</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex pr-3">
+                                        <button type="button" class="btn btn-default p-2 text-soft-gray">
+                                            <i class="bilateral-icon export"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex pr-3">
+                                        <button type="button" class="btn btn-default p-2 text-soft-gray">
+                                            <i class="bilateral-icon import"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <a href="./form.html" class="btn btn-secondary font-proxima-bold">
+                                            Tambah Proyek
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-end mt-8">
+                                <div class="form-group flex-1 pr-3">
+                                    <p class="form-label">Status</p>
+                                    <select class="form-select mt-1 w-full">
+                                        <option>Pilih</option>
+                                        <option selected>Implementasi</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1 pr-3">
+                                    <p class="form-label">KL</p>
+                                    <select class="form-select mt-1 w-full">
+                                        <option>Pilih</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1 pr-3">
+                                    <p class="form-label">Lender</p>
+                                    <select class="form-select mt-1 w-full">
+                                        <option>Pilih</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1 pr-3">
+                                    <p class="form-label">Bidang</p>
+                                    <select class="form-select mt-1 w-full">
+                                        <option>Pilih</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1 pr-3">
+                                    <p class="form-label">Program</p>
+                                    <select class="form-select mt-1 w-full">
+                                        <option>Pilih</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1 pr-3">
+                                    <p class="form-label">Lokasi</p>
+                                    <select class="form-select mt-1 w-full">
+                                        <option>Pilih</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" id="btn-filter"
+                                        class="btn btn-sm btn-default p-3 text-soft-gray">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="more-filter" class="hidden">
+                                <div class="flex mt-4">
+                                    <div class="form-group flex-1 pr-3">
+                                        <p class="form-label">Nilai Ekivalen USD</p>
+                                        <select class="form-select mt-1 w-full">
+                                            <option>Pilih</option>
+                                            <option selected>Atur</option>
+                                            <option>Option 3</option>
+                                            <option>Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group flex-1 pr-3">
+                                        <p class="form-label">Cluster</p>
+                                        <select class="form-select mt-1 w-full">
+                                            <option>Pilih</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                            <option>Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group flex-1 pr-3">
+                                        <p class="form-label">Tahun Implementasi</p>
+                                        <select class="form-select mt-1 w-full">
+                                            <option>Pilih</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                            <option>Option 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div style="height: 470px;" class="flex overflow-hidden">
+                                <div id="map" class="flex-1"></div>
+                                <div class="p-5 overflow-y-auto">
+                                    <p class="text-lg font-proxima-semi-bold">Keterangan</p>
+                                    <div>
+                                        <div class="flex py-3 px-4 text-sm border-b border-soft-gray -mx-4">
+                                            <div class="flex-1 pr-3">Jakarta</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jawa Barat</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jawa Tengah</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">DIY Yogyakarta</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jakarta</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jawa Barat</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jawa Tengah</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">DIY Yogyakarta</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jakarta</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jawa Barat</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">Jawa Tengah</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                        <div class="flex py-3 px-5 text-sm border-b border-soft-gray -mx-5">
+                                            <div class="flex-1 pr-3">DIY Yogyakarta</div>
+                                            <div class="text-light-gray">USD 8,8742 • 6 Proyek</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End Content Page -->
+        </div>
+        <!-- End Main Content -->
+    </div>
+
+    <script src="../dist/js/components.js"></script>
+</body>
+
+</html>

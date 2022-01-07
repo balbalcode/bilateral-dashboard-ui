@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+// Abstract
+@import './abstracts/_abstract-dir';
+
+// Base
+@import './base/_base-dir';
+
+// Components
+@import './components/_components-dir';
+
+// Layout
+@import './layouts/_layouts-dir';
+
+html,
+body {
+  background-color: #EBECED;
+  color: #333333;
+  font-family: 'Proxima-Regular';
+}
+
+.main-body {
+  margin: 56px 0;
+}
+
+.container--with-background {
+  background-image: url('../../assets/images/bg.png');
+  background-size: cover;
+  min-height: 350px;
+  padding: 60px 37px;
+  position: relative;
+
+  .inside-container {
+    position: absolute;
+    left: 37px;
+    right: 37px;
+  }
+}
+
+.container {
+  max-width: 100%;
+}
+
+ol {
+  list-style: decimal !important;
+  list-style-position: inside !important;
+}

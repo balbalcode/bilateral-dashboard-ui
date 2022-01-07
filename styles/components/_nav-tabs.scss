@@ -1,0 +1,31 @@
+.nav-tabs {
+  > li {
+    color: #666666;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 16px;
+
+    &.elipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.has-divider {
+      border-bottom: 1px solid #ebeced;
+    }
+
+    &.active {
+      background-color: #f5f8fa;
+      border-left: 3px solid #f88a28;
+      color: #333333;
+      font-family: "Proxima-SemiBold";
+    }
+  }
+
+  &--inside {
+    list-style-position: inside;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

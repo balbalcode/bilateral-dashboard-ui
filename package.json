@@ -1,0 +1,29 @@
+{
+  "name": "bilateral-dashboard-ui",
+  "version": "1.0.0",
+  "description": "Dashboard of BILATERAL",
+  "main": "index.html",
+  "scripts": {
+    "tailwind:build": "postcss styles/tailwind.scss -o dist/css/tailwind.css",
+    "styles:watch": "node-sass --watch styles/styles.scss dist/css/styles.min.css --output-style compressed",
+    "theme:build": "npm run tailwind:build && node-sass styles/styles.scss dist/css/styles.min.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balbalcode/bilateral-dashboard-ui.git"
+  },
+  "author": "M. Abdul Aziz <me@zizcode.web.id>, Ikbal Maulana <iam@balbal.my.id>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balbalcode/bilateral-dashboard-ui/issues"
+  },
+  "homepage": "https://github.com/balbalcode/bilateral-dashboard-ui#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "autoprefixer": "^9.8.6",
+    "node-sass": "^5.0.0",
+    "postcss-cli": "^8.2.0",
+    "tailwindcss": "^1.9.6"
+  }
+}
