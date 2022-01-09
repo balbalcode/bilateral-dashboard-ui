@@ -66,6 +66,11 @@ a {
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
+b,
+strong {
+  font-weight: bolder;
+}
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -643,8 +648,20 @@ img {
   background-color: rgba(29, 28, 47, var(--bg-opacity)) !important;
 }
 
+.bg-secondary {
+  --bg-opacity: 1 !important;
+  background-color: #F88A28 !important;
+  background-color: rgba(248, 138, 40, var(--bg-opacity)) !important;
+}
+
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.bg-white {
+  --bg-opacity: 1 !important;
+  background-color: white !important;
+  background-color: rgba(255, 255, 255, var(--bg-opacity)) !important;
 }
 
 .bg-gray {
@@ -665,10 +682,18 @@ img {
   background-color: rgba(248, 138, 40, var(--bg-opacity)) !important;
 }
 
+.bg-opacity-25 {
+  --bg-opacity: 0.25 !important;
+}
+
 .border-soft-gray {
   --border-opacity: 1 !important;
   border-color: #EBECED !important;
   border-color: rgba(235, 236, 237, var(--border-opacity)) !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
 }
 
 .rounded-t-none {
@@ -681,8 +706,22 @@ img {
   border-bottom-left-radius: 0 !important;
 }
 
+.rounded-t {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.rounded-b {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
 .border-solid {
   border-style: solid !important;
+}
+
+.border-dotted {
+  border-style: dotted !important;
 }
 
 .border-none {
@@ -709,6 +748,10 @@ img {
   cursor: pointer !important;
 }
 
+.inline-block {
+  display: inline-block !important;
+}
+
 .flex {
   display: flex !important;
 }
@@ -717,12 +760,24 @@ img {
   display: table !important;
 }
 
+.table-cell {
+  display: table-cell !important;
+}
+
+.table-row {
+  display: table-row !important;
+}
+
 .grid {
   display: grid !important;
 }
 
 .hidden {
   display: none !important;
+}
+
+.items-start {
+  align-items: flex-start !important;
 }
 
 .items-end {
@@ -791,6 +846,10 @@ img {
 
 .text-5xl {
   font-size: 3rem !important;
+}
+
+.m-3 {
+  margin: 0.75rem !important;
 }
 
 .my-3 {
@@ -879,6 +938,10 @@ img {
   margin-top: -10rem !important;
 }
 
+.-mt-72 {
+  margin-top: -18rem !important;
+}
+
 .opacity-75 {
   opacity: 0.75 !important;
 }
@@ -941,6 +1004,11 @@ img {
   padding-bottom: 2rem !important;
 }
 
+.px-8 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
 .py-12 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
@@ -956,6 +1024,10 @@ img {
   padding-bottom: 16rem !important;
 }
 
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem !important;
 }
@@ -964,12 +1036,20 @@ img {
   padding-right: 0.75rem !important;
 }
 
+.pl-3 {
+  padding-left: 0.75rem !important;
+}
+
 .pt-5 {
   padding-top: 1.25rem !important;
 }
 
 .pb-5 {
   padding-bottom: 1.25rem !important;
+}
+
+.pl-5 {
+  padding-left: 1.25rem !important;
 }
 
 .pr-8 {
@@ -982,6 +1062,10 @@ img {
 
 .absolute {
   position: absolute !important;
+}
+
+.relative {
+  position: relative !important;
 }
 
 .sticky {
@@ -1004,6 +1088,10 @@ img {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
 }
 
 .text-dark {
@@ -1060,6 +1148,15 @@ img {
   letter-spacing: 0.05em !important;
 }
 
+.break-words {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+.w-5 {
+  width: 1.25rem !important;
+}
+
 .w-10 {
   width: 2.5rem !important;
 }
@@ -1074,6 +1171,10 @@ img {
 
 .w-4\/6 {
   width: 66.666667% !important;
+}
+
+.w-11\/12 {
+  width: 91.666667% !important;
 }
 
 .w-full {
@@ -1117,6 +1218,12 @@ img {
 
 .col-span-2 {
   grid-column: span 2 / span 2 !important;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {

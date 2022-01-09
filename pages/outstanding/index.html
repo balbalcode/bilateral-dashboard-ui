@@ -9,11 +9,11 @@
 
     <!-- Start ChartJS Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
-        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
-        crossorigin="anonymous" />
+          integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+          crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
-        crossorigin="anonymous"></script>
+            integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+            crossorigin="anonymous"></script>
     <!-- End ChartJS Library -->
 
     <!-- Load jQuery -->
@@ -23,123 +23,490 @@
 </head>
 
 <body>
-    <div class="main-layout">
-        <!-- Start Main Sidebar -->
-        <div class="main-sidebar bg-dark">
-            <div class="main-sidebar-head">
-                <div class="main-sidebar__icon"></div>
-                <div class="main-sidebar__title font-proxima-bold text-lg text-white uppercase">
-                    Bilateral
-                </div>
-            </div>
-            <div class="main-sidebar-menu">
-                <div class="main-sidebar-menu__item">
-                    <p class="main-sidebar-menu__title">Dashboard</p>
-                    <ul>
-                        <li>
-                            <a href="table-makro.html">
-                                <i class="bilateral-icon office"></i>
-                                <span>Data Makro APBN</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="#">
-                                <i class="bilateral-icon graph active"></i>
-                                <span>Data Outstanding Utang</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html">
-                                <i class="bilateral-icon handshake"></i>
-                                <span>Portofolio Proyek Bilateral</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="segrakan/index.html">
-                                <i class="bilateral-icon segrakan"></i>
-                                <span>Segrakan</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="main-sidebar-menu__item">
-                    <p class="main-sidebar-menu__title">Master Data</p>
-                    <ul>
-                        <li>
-                            <a href="#">Program</a>
-                        </li>
-                        <li>
-                            <a href="#">Bidang</a>
-                        </li>
-                        <li>
-                            <a href="#">Kementrian / Lembaga</a>
-                        </li>
-                        <li>
-                            <a href="#">Cluster</a>
-                        </li>
-                        <li>
-                            <a href="#">Lender</a>
-                        </li>
-                        <li>
-                            <a href="#">Status Proyek</a>
-                        </li>
-                        <li>
-                            <a href="#">Lokasi</a>
-                        </li>
-                        <li>
-                            <a href="#">Kurs</a>
-                        </li>
-                    </ul>
-                </div>
+<div class="main-layout">
+    <!-- Start Main Sidebar -->
+    <div class="main-sidebar bg-dark">
+        <div class="main-sidebar-head">
+            <div class="main-sidebar__icon"></div>
+            <div class="main-sidebar__title font-proxima-bold text-lg text-white uppercase">
+                Bilateral
             </div>
         </div>
-        <!-- End Main Sidebar -->
-        <!-- Start Main Content -->
-        <div class="main-content">
-            <!-- Start Navbar -->
-            <div class="main-header">
-                <div class="main-header-title font-proxima-bold text-default">Data Outstanding Utang</div>
-                <div class="main-header-menu main-header-menu--right">
-                    <div class="main-header-menu__item border-r border-l border-soft-gray h-full">
-                        <div class="form-search form-input-group h-full">
-                            <div class="form-input-group-prepend">
-                                <div class="input-group-text border-none">
-                                    <i class="bilateral-icon search"></i>
-                                </div>
-                                <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-header-menu__item">
-                        <div class="dropdown cursor-pointer">
-                            <div class="dropdown-button has-icon">
-                                <img src="../../assets/images/user.svg" class="main-header__profile-image" />
-                            </div>
-                            <div class="dropdown-content">
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">Profile</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Logout</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="main-sidebar-menu">
+            <div class="main-sidebar-menu__item">
+                <p class="main-sidebar-menu__title">Dashboard</p>
+                <ul>
+                    <li>
+                        <a href="../table-makro.html">
+                            <i class="bilateral-icon office"></i>
+                            <span>Data Makro APBN</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="bilateral-icon graph active"></i>
+                            <span>Data Outstanding Utang</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html">
+                            <i class="bilateral-icon handshake"></i>
+                            <span>Portofolio Proyek Bilateral</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../segrakan/index.html">
+                            <i class="bilateral-icon segrakan"></i>
+                            <span>Segrakan</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <!-- End Navbar -->
-            <!-- Start Content Page -->
-
-            <!-- End Content Page -->
+            <div class="main-sidebar-menu__item">
+                <p class="main-sidebar-menu__title">Master Data</p>
+                <ul>
+                    <li>
+                        <a href="#">Program</a>
+                    </li>
+                    <li>
+                        <a href="#">Bidang</a>
+                    </li>
+                    <li>
+                        <a href="#">Kementrian / Lembaga</a>
+                    </li>
+                    <li>
+                        <a href="#">Cluster</a>
+                    </li>
+                    <li>
+                        <a href="#">Lender</a>
+                    </li>
+                    <li>
+                        <a href="#">Status Proyek</a>
+                    </li>
+                    <li>
+                        <a href="#">Lokasi</a>
+                    </li>
+                    <li>
+                        <a href="#">Kurs</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- End Main Content -->
-
     </div>
+    <!-- End Main Sidebar -->
+    <!-- Start Main Content -->
+    <div class="main-content">
+        <!-- Start Navbar -->
+        <div class="main-header">
+            <div class="main-header-title font-proxima-bold text-default">Data Outstanding Utang</div>
+            <div class="main-header-menu main-header-menu--right">
+                <div class="main-header-menu__item border-r border-b border-l border-soft-gray h-full">
+                    <div class="form-search form-input-group h-full">
+                        <div class="form-input-group-prepend">
+                            <div class="input-group-text border-none">
+                                <i class="bilateral-icon search"></i>
+                            </div>
+                            <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header-menu__item">
+                    <div class="dropdown cursor-pointer">
+                        <div class="dropdown-button has-icon">
+                            <img src="../../assets/images/user.svg" class="main-header__profile-image"/>
+                        </div>
+                        <div class="dropdown-content">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
+        <!-- Start Content Page -->
+        <div class="main-body">
+            <!--table content-->
+            <div class="z-0 container--with-background pb-56">
+            </div>
+            <div class="relative z-10 -mt-72 w-11/12 mx-auto rounded">
+                <div class="card-header rounded-t card-header--has-divider bg-light-gray">
+                    <div class="flex items-center">
+                        <div class="card-header__title flex-1">
+                            Ringkasan
+                        </div>
+                        <div class="flex items-start">
+                            <a href="detail_group_debt_list.html" class="btn btn-md btn-secondary font-proxima-bold">
+                                Detail Utang LN Menurut Kategori
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0 rounded-b rounded-t-none bg-white">
+                    <div class="table text-sm w-full">
+                        <!--table heading-->
+                        <div class="table-row border-soft-gray px-3 border-b border-r">
+                            <div class="table-cell border-soft-gray border-r border-b px-3 py-3 w-1/2 bg-light-gray">
+                                <div class="font-proxima-semi-bold">Kelompok Peminjam</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-b border-r px-3 text-right font-proxima-semi-bold bg-light-gray">
+                                2015
+                            </div>
+                            <div class="table-cell border-soft-gray border-b border-r px-3 text-right font-proxima-semi-bold bg-light-gray">
+                                2016
+                            </div>
+                            <div class="table-cell border-soft-gray border-b border-r px-3 text-right font-proxima-semi-bold bg-light-gray">
+                                2017
+                            </div>
+                            <div class="table-cell border-soft-gray border-b border-r px-3 text-right font-proxima-semi-bold bg-light-gray">
+                                2018
+                            </div>
+                            <div class="table-cell border-soft-gray border-b border-r px-3 text-right font-proxima-semi-bold bg-light-gray">
+                                2019
+                            </div>
+                            <div class="table-cell border-soft-gray border-b border-r px-3 text-right font-proxima-semi-bold bg-light-gray">
+                                2020
+                            </div>
+                        </div>
+                        <!--end of table heading-->
 
-    <script src="../../dist/js/page-index.js"></script>
-    <script src="../../dist/js/components.js"></script>
+                        <!--table body-->
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-3 px-4 py-3 w-1/2">
+                                <div class="font-proxima-semi-bold">Pemerintah</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                147,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                147,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                147,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                147,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                147,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                147,30
+                            </div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-3 px-5 py-3 w-1/2">
+                                <div class="font-proxima-semi-bold">Pinjaman Proyek dan Program</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                51,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                51,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                51,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                51,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                51,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                51,30
+                            </div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-8 py-3 w-1/2">
+                                <div class="font-proxima">Bilateral</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-8 py-3 w-1/2">
+                                <div class="font-proxima">Multilateral</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-8 py-3 w-1/2">
+                                <div class="font-proxima">Komersial</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">31.11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">31.11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">31.11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">31.11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">31.11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">31.11</div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-3 px-5 py-3 w-1/2">
+                                <div class="font-proxima-semi-bold">Surat Utang</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-8 py-3 w-1/2">
+                                <div class="font-proxima">SBN Internasional</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-8 py-3 w-1/2">
+                                <div class="font-proxima">SBN Domestik yang dimiliki WNA</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                        </div>
+
+                        <!-- divider table -->
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-b border-t border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                        </div>
+                        <!-- end of divider table -->
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-3 px-5 py-3 w-1/2">
+                                <div class="font-proxima-semi-bold">BUMN</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                        </div>
+
+                        <!-- divider table -->
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-b border-t border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                        </div>
+                        <!-- end of divider table -->
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-3 px-5 py-3 w-1/2">
+                                <div class="font-proxima-semi-bold">Surat Utang</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold">
+                                48.53
+                            </div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-8 py-3 w-1/2">
+                                <div class="font-proxima">Swasta Nasional</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">10,11</div>
+                        </div>
+
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r px-8 py-3 w-1/2">
+                                <div class="font-proxima">Swasta Campuran</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima ">21,11</div>
+                        </div>
+
+                        <!-- divider table -->
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-b border-t border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                            <div class="table-cell border-soft-gray border-b border-r w-full py-3 bg-light-gray"></div>
+                        </div>
+                        <!-- end of divider table -->
+
+                        <!--end of table body-->
+
+                        <!--table foot-->
+                        <div class="table-row border-soft-gray">
+                            <div class="table-cell border-soft-gray border-r border-b px-3 px-4 py-3 w-1/2">
+                                <div class="font-proxima-semi-bold">Total</div>
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                247,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                247,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                247,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                247,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                247,30
+                            </div>
+                            <div class="table-cell border-soft-gray border-r border-b px-3 text-right font-proxima-semi-bold ">
+                                247,30
+                            </div>
+                        </div>
+                        <!--end of table foot-->
+                    </div>
+
+                    <div class="text-sm py-3 px-5 m-3 mx-auto">
+                        <p class="bg-secondary p-3 rounded bg-opacity-25">
+                            <strong>Satuan</strong> Dalam Juta USD <br>
+                            <strong>Sumber</strong> Kemenkeu & BI, Statistik Utang Luar Negeri Indonesia Vol IX,
+                            Agustus
+                            2021<br>
+                        </p>
+                    </div>
+                </div>
+                <!-- end of table content -->
+                <!--line chart-->
+                <div class="mt-8">
+                    <div class="card">
+                        <div class="card-header bg-light-gray border-b">
+                            <p class="card-header__title">Perkembangan Utang Luar Negri Indonesia</p>
+                            <p class="card-header__subtitle text-gray">2015 - 2020 (September)</p>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="chart-debt-development" width="100%" style="max-height: 60vh"></canvas>
+                            <!--you can use max height like this if you want to set height of canvas-->
+                            <!-- <canvas id="chart-debt-development" width="100%"  style="max-height: 60vh"></canvas> -->
+                        </div>
+                    </div>
+                </div>
+                <!--end of line chart-->
+
+                <!--pie chart-->
+                <div class="mt-8">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="card">
+                            <div class="card-header bg-light-gray border-b border-soft-gray">
+                                <p class="card-header__title">Komposisi Utang Luar Negeri Indonesia</p>
+                                <p class="card-header__subtitle text-gray">per September 2020</p>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chart-country-debt" width="100%" height="80px"></canvas>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-light-gray border-b border-soft-gray">
+                                <p class="card-header__title">Detail Komposisi Utang Luar Negeri dari Sekot
+                                    Pemerintah</p>
+                                <p class="card-header__subtitle text-gray">per September 2020</p>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chart-detail-debt" width="100%" height="80px"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of pie chart-->
+            </div>
+        </div>
+        <!-- End Content Page -->
+    </div>
+    <!-- End Main Content -->
+
+</div>
+
+<script src="../../dist/js/page-outstanding.js"></script>
+<script src="../../dist/js/components.js"></script>
 </body>
 
 </html>

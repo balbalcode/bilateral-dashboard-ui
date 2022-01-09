@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/styles.min.css">
+    <link rel="stylesheet" href="../../dist/css/tailwind.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../../vendor/fontawesome/css/all.min.css">
+
+
+    <!-- Start ChartJS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
+          integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+          crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+            integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+            crossorigin="anonymous"></script>
+    <!-- End ChartJS Library -->
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="../../vendor/jQuery/jquery-3.4.1.min.js"></script>
+
+    <title>BILATERAL</title>
+</head>
+
+<body>
+<div class="main-layout">
+    <!-- Start Main Sidebar -->
+    <div class="main-sidebar bg-dark">
+        <div class="main-sidebar-head">
+            <div class="main-sidebar__icon"></div>
+            <div class="main-sidebar__title font-proxima-bold text-lg text-white uppercase">
+                Bilateral
+            </div>
+        </div>
+        <div class="main-sidebar-menu">
+            <div class="main-sidebar-menu__item">
+                <p class="main-sidebar-menu__title">Dashboard</p>
+                <ul>
+                    <li>
+                        <a href="../table-makro.html">
+                            <i class="bilateral-icon office"></i>
+                            <span>Data Makro APBN</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="bilateral-icon graph active"></i>
+                            <span>Data Outstanding Utang</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html">
+                            <i class="bilateral-icon handshake"></i>
+                            <span>Portofolio Proyek Bilateral</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bilateral-icon segrakan"></i>
+                            <span>Segrakan</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-sidebar-menu__item">
+                <p class="main-sidebar-menu__title">Master Data</p>
+                <ul>
+                    <li>
+                        <a href="#">Program</a>
+                    </li>
+                    <li>
+                        <a href="#">Bidang</a>
+                    </li>
+                    <li>
+                        <a href="#">Kementrian / Lembaga</a>
+                    </li>
+                    <li>
+                        <a href="#">Cluster</a>
+                    </li>
+                    <li>
+                        <a href="#">Lender</a>
+                    </li>
+                    <li>
+                        <a href="#">Status Proyek</a>
+                    </li>
+                    <li>
+                        <a href="#">Lokasi</a>
+                    </li>
+                    <li>
+                        <a href="#">Kurs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Sidebar -->
+    <!-- Start Main Content -->
+    <div class="main-content">
+        <!-- Start Navbar -->
+        <div class="main-header">
+            <div class="main-header-title font-proxima-bold text-default">Data Outstanding Utang</div>
+            <div class="main-header-menu main-header-menu--right">
+                <div class="main-header-menu__item border-r border-b border-l border-soft-gray h-full">
+                    <div class="form-search form-input-group h-full">
+                        <div class="form-input-group-prepend">
+                            <div class="input-group-text border-none">
+                                <i class="bilateral-icon search"></i>
+                            </div>
+                            <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header-menu__item">
+                    <div class="dropdown cursor-pointer">
+                        <div class="dropdown-button has-icon">
+                            <img src="../../assets/images/user.svg" class="main-header__profile-image"/>
+                        </div>
+                        <div class="dropdown-content">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
+        <!-- Start Content Page -->
+        <div class="main-body">
+            <!--table content-->
+            <div class="z-0 container--with-background pb-56">
+            </div>
+            <div class="relative z-10 -mt-72 w-11/12 mx-auto rounded">
+                <div class="grid grid-cols-3 gap-6">
+                    <!--pane sidebar-->
+                    <div class="card sticky" style="top: 90px;">
+                        <div class="card-body p-0">
+                            <ul class="nav nav-tabs nav-tabs--inside">
+                                <li class="nav-tabs__item elipsis active">
+                                    <a href="detail_group_debt_list.html">
+                                        <div class="flex">
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-dark break-words">
+                                                    Utang LN Menurut Kelompok <br> Peminjam <br>
+                                                    <span class="text-gray text-xs font-proxima">408.25 Juta USD</span>
+                                                </p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fa fa-chevron-right text-gray"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-tabs__item elipsis">
+                                    <a href="detail_creditor_debt_list.html">
+                                        <div class="flex">
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-dark break-words">
+                                                    Utang LN Menurut Kreditor <br>
+                                                    <span class="text-gray text-xs font-proxima">408.25 Juta USD</span>
+                                                </p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fa fa-chevron-right text-gray"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-tabs__item elipsis">
+                                    <a href="detail_type_debt_list.html">
+                                        <div class="flex">
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-dark break-words">
+                                                    Utang LN Pemerintah dan Bank Sentral <br> Menurut Jenis Utang<br>
+                                                    <span class="text-gray text-xs font-proxima">199.25 Juta USD</span>
+                                                </p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fa fa-chevron-right text-gray"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-tabs__item elipsis">
+                                    <a href="detail_organization_debt_list.html">
+                                        <div class="flex">
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-dark break-words">
+                                                    Utang LN Pemerintah dan Bank Sentral <br> Menurut Negara/Lembaga
+                                                    <br>Kreditor
+                                                    <br>
+                                                    <span class="text-gray text-xs font-proxima">199.25 Juta USD</span>
+                                                </p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fa fa-chevron-right text-gray"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-tabs__item elipsis">
+                                    <a href="detail_sector_debt_list.html">
+                                        <div class="flex">
+                                            <div class="flex-1">
+                                                <p class="font-proxima-bold text-dark break-words">
+                                                    Utang LN Swasta Menurut Kreditor <br>
+                                                    <span class="text-gray text-xs font-proxima">208.25 Juta USD</span>
+                                                </p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="fa fa-chevron-right text-gray"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of pane sidebar-->
+
+                    <div class="col-span-2">
+                        <div class="card">
+                            <div class="card-header card-header--has-divider bg-light-gray">
+                                <div class="flex">
+                                    <div class="card-header__title flex-1">Utang LN Menurut Kelompok Peminjam</div>
+                                </div>
+                                <div class="tab-rounded mt-3">
+                                    <a href="#" class="text-xs tab-rounded__item active">Tabel</a>
+                                    <a href="detail_group_debt_statistics.html"
+                                       class="text-xs tab-rounded__item">Grafik</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!--table recap-->
+                                <div class="table w-full">
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm font-proxima-bold text-center">
+                                            1
+                                        </div>
+                                        <div class="table-cell py-2 text-sm w-11/12 font-proxima-bold">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">Pemerintah dan Bank Sentral</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima-bold">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">199,286</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm"></div>
+                                        <div class="table-cell py-2 pl-3 text-sm w-11/12 font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">Pemerintah</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">99,286</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm"></div>
+                                        <div class="table-cell py-2 pl-3 text-sm w-11/12 font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">Bank Sentral</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">99,286</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm font-proxima-bold text-center">
+                                            2
+                                        </div>
+                                        <div class="table-cell py-2 text-sm w-11/12 font-proxima-bold">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">Swasta</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima-bold">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">199,286</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm"></div>
+                                        <div class="table-cell py-2 pl-3 text-sm w-11/12 font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">Lembaga Keuangan</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">99,286</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm"></div>
+                                        <div class="table-cell py-2 pl-5 text-sm w-11/12 font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">Bank</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">99,286</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm"></div>
+                                        <div class="table-cell py-2 pl-5 text-sm w-11/12 font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">LKBB</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">99,286</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 pr-2 text-sm"></div>
+                                        <div class="table-cell py-2 pl-3 text-sm w-11/12 font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">Bukan Lembaga Keuangan</span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">99,286</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <div class="table-cell py-2 text-sm font-proxima-bold">
+                                            Total
+                                        </div>
+                                        <div class="table-cell py-2 text-sm w-11/12 font-proxima-bold">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted"></span>
+                                        </div>
+                                        <div class="table-cell py-2 text-sm text-right font-proxima-bold">
+                                            <span class="w-full inline-block border-b border-soft-gray border-dotted">399,286</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end of table-->
+
+                                <div class="text-sm m-3 mx-auto">
+                                    <p class="bg-secondary p-3 rounded bg-opacity-25">
+                                        <strong>Satuan</strong> Dalam Juta USD <br>
+                                        <strong>Sumber</strong> Kemenkeu & BI, Statistik Utang Luar Negeri Indonesia Vol
+                                        IX, Agustus 2021<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Content Page -->
+    </div>
+    <!-- End Main Content -->
+
+</div>
+
+<script src="../../dist/js/components.js"></script>
+</body>
+
+</html>
