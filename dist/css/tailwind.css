@@ -41,6 +41,12 @@ body {
  * 2. Show the overflow in Edge and IE.
  */
 
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -106,7 +112,8 @@ img {
 
 button,
 input,
-select {
+select,
+textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
@@ -184,6 +191,10 @@ progress {
  * Remove the default vertical scrollbar in IE 10+.
  */
 
+textarea {
+  overflow: auto;
+}
+
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -259,6 +270,7 @@ progress {
  */
 
 
+hr,
 p {
   margin: 0;
 }
@@ -340,6 +352,10 @@ html {
  * Ensure horizontal rules are visible by default
  */
 
+hr {
+  border-top-width: 1px;
+}
+
 /**
  * Undo the `border-style: none` reset that Normalize applies to images so that
  * our `border-{width}` utilities have the expected effect.
@@ -354,15 +370,20 @@ img {
   border-style: solid;
 }
 
-input::-moz-placeholder {
+textarea {
+  resize: vertical;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
   color: #a0aec0;
 }
 
-input:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #a0aec0;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #a0aec0;
 }
 
@@ -394,7 +415,8 @@ a {
 
 button,
 input,
-select {
+select,
+textarea {
   padding: 0;
   line-height: inherit;
   color: inherit;
@@ -728,6 +750,14 @@ img {
   border-style: none !important;
 }
 
+.border {
+  border-width: 1px !important;
+}
+
+.border-r-0 {
+  border-right-width: 0 !important;
+}
+
 .border-t {
   border-top-width: 1px !important;
 }
@@ -770,6 +800,10 @@ img {
 
 .grid {
   display: grid !important;
+}
+
+.contents {
+  display: contents !important;
 }
 
 .hidden {
@@ -867,6 +901,11 @@ img {
   margin-bottom: 1.25rem !important;
 }
 
+.my-8 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
 .mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -934,6 +973,18 @@ img {
   margin-bottom: 2rem !important;
 }
 
+.-mt-4 {
+  margin-top: -1rem !important;
+}
+
+.-mr-8 {
+  margin-right: -2rem !important;
+}
+
+.-ml-8 {
+  margin-left: -2rem !important;
+}
+
 .-mt-40 {
   margin-top: -10rem !important;
 }
@@ -952,6 +1003,10 @@ img {
 
 .overflow-y-auto {
   overflow-y: auto !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
 }
 
 .p-0 {
@@ -1082,6 +1137,14 @@ img {
   right: 0 !important;
 }
 
+.resize-none {
+  resize: none !important;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
 .text-left {
   text-align: left !important;
 }
@@ -1136,6 +1199,12 @@ img {
   color: rgba(169, 172, 188, var(--text-opacity)) !important;
 }
 
+.text-danger {
+  --text-opacity: 1 !important;
+  color: #FF3E3E !important;
+  color: rgba(255, 62, 62, var(--text-opacity)) !important;
+}
+
 .italic {
   font-style: italic !important;
 }
@@ -1163,6 +1232,10 @@ img {
 
 .w-24 {
   width: 6rem !important;
+}
+
+.w-72 {
+  width: 18rem !important;
 }
 
 .w-1\/2 {
@@ -1208,6 +1281,10 @@ img {
   gap: 2rem !important;
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
@@ -1216,8 +1293,16 @@ img {
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2 !important;
+}
+
+.col-span-4 {
+  grid-column: span 4 / span 4 !important;
 }
 
 @-webkit-keyframes spin {

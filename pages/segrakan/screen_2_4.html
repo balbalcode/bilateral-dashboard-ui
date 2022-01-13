@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/styles.min.css">
+    <link rel="stylesheet" href="../../dist/css/tailwind.css">
+    <title>BILATERAL</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../../vendor/fontawesome/css/all.min.css">
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="../../vendor/jQuery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+<div class="main-layout" id="app">
+    <!-- Start Main Sidebar -->
+    <div class="main-sidebar bg-dark">
+        <div class="main-sidebar-head">
+            <div class="main-sidebar__icon"></div>
+            <div class="main-sidebar__title font-proxima-bold text-lg text-white uppercase">
+                Bilateral
+            </div>
+        </div>
+        <div class="main-sidebar-menu">
+            <div class="main-sidebar-menu__item">
+                <p class="main-sidebar-menu__title">Dashboard</p>
+                <ul>
+                    <li>
+                        <a href="table-makro.html">
+                            <i class="bilateral-icon office"></i>
+                            <span>Data Makro APBN</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./outstanding/index.html">
+                            <i class="bilateral-icon graph"></i>
+                            <span>Data Outstanding Utang</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="bilateral-icon handshake active"></i>
+                            <span>Portofolio Proyek Bilateral</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="segrakan/index.html">
+                            <i class="bilateral-icon segrakan"></i>
+                            <span>Segrakan</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-sidebar-menu__item">
+                <p class="main-sidebar-menu__title">Master Data</p>
+                <ul>
+                    <li>
+                        <a href="#">Program</a>
+                    </li>
+                    <li>
+                        <a href="#">Bidang</a>
+                    </li>
+                    <li>
+                        <a href="#">Kementrian / Lembaga</a>
+                    </li>
+                    <li>
+                        <a href="#">Cluster</a>
+                    </li>
+                    <li>
+                        <a href="#">Lender</a>
+                    </li>
+                    <li>
+                        <a href="#">Status Proyek</a>
+                    </li>
+                    <li>
+                        <a href="#">Lokasi</a>
+                    </li>
+                    <li>
+                        <a href="#">Kurs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Sidebar -->
+    <!-- Start Main Content -->
+    <div class="main-content">
+        <!-- Start Navbar -->
+        <div class="main-header">
+            <div class="main-header-title font-proxima-bold text-default">Portofolio Proyek Bilateral</div>
+            <div class="main-header-menu main-header-menu--right">
+                <div class="main-header-menu__item border-r border-l border-soft-gray h-full">
+                    <div class="form-search form-input-group h-full">
+                        <div class="form-input-group-prepend">
+                            <div class="input-group-text border-none">
+                                <i class="bilateral-icon search"></i>
+                            </div>
+                            <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header-menu__item">
+                    <div class="dropdown cursor-pointer">
+                        <div class="dropdown-button has-icon">
+                            <img src="../../assets/images/user.svg" class="main-header__profile-image"/>
+                        </div>
+                        <div class="dropdown-content">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
+        <!-- Start Content Page -->
+        <div class="main-body">
+            <section class="section--with-padding">
+                <div class="grid gap-6">
+                    <div class="card">
+                        <div class="card-header card-header--has-divider bg-light-gray">
+                            <div class="flex">
+                                <div class="flex w-10 items-center">
+                                    <i class="fas fa-list"></i>
+                                </div>
+                                <div class="w-full">
+                                    <div class="card-header__subtitle font-proxima-semi-bold">Langkah 3 / 14</div>
+                                    <div class="card-header__title">Manfaat Proyek dan Penerima Manfaat</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-8">
+                                <p class="text-sm text-gray">Mengacu pada DUK dan DIPK DRPLN-JM</p>
+                            </div>
+                            <div class="grid grid-cols-2" v-for="(data, index) in benefits">
+                                <div>
+                                    <p v-if="index === 0" class="form-text">Manfaat</p>
+                                    <input type="text" v-model="data.name" class="form-input"
+                                           :placeholder="`Manfaat ${index+1}`">
+                                </div>
+                                <div>
+                                    <p v-if="index === 0" class="form-text">Penerima Manfaat</p>
+                                    <div :class="`form-input-group-append ${(index === 0) ? ' border-r border-soft-gray' : ''}`">
+                                        <input v-model="data.receiver" type="text" class="form-input"
+                                               :placeholder="`Penerima Manfaat ${index+1}`">
+                                        <div class="input-group-text " v-if="index > 0"
+                                             @click="removeAgency(index)">
+                                            <i class="fa fa-trash-alt text-danger"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="form-note flex-1">
+
+                                </div>
+                                <div @click="addBenefit"
+                                     class="w-24 text-right cursor-pointer text-secondary font-proxima-light">
+                                    <span class="text-sm">+</span><span class="text-xs font-proxima-bold"> Tambah data</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="flex justify-between">
+                                <div>
+                                    <button type="button"
+                                            class="btn btn-md btn-default hover:bg-secondary text-secondary font-proxima-bold">
+                                        Simpan
+                                    </button>
+                                </div>
+                                <div class="flex">
+                                    <a href="screen_2_3.html"
+                                       class="btn btn-md mr-3 btn-default hover:bg-secondary text-secondary font-proxima-bold">
+                                        Sebelumnya
+                                    </a>
+                                    <a href="screen_2_5.html" class="btn btn-md btn-secondary font-proxima-bold">
+                                        Berikutnya
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- End Content Page -->
+    </div>
+    <!-- End Main Content -->
+</div>
+
+<script src="../../dist/js/components.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            benefits: [{
+                name: "",
+                receiver: "",
+                id: ""
+            }]
+        },
+        methods: {
+            addBenefit() {
+                this.benefits.push({
+                    name: "",
+                    receiver: "",
+                    id: ""
+                })
+            },
+
+            removeAgency(index) {
+                this.benefits.splice(index, 1)
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

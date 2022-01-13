@@ -14,9 +14,11 @@ module.exports = {
             "gray": "#ECF1F3",
             "soft-gray": "#EBECED",
             "light-gray": "#F5F8FA",
+            danger: "#FF3E3E"
         },
         borderColor: {
             "soft-gray": "#EBECED",
+            danger: "#FF3E3E"
         },
         colors: {
             dark: "#1D1C2F",
@@ -26,6 +28,7 @@ module.exports = {
             secondary: "#F88A28",
             "light-gray": "#666666",
             "soft-gray": "#A9ACBC",
+            danger: "#FF3E3E"
         },
         container: {
             padding: "37px",
@@ -39,6 +42,9 @@ module.exports = {
         extend: {
             margin: {
                 '-72': '-18rem',
+                '72': '18rem',
+            },
+            width: {
                 '72': '18rem',
             }
         },
