@@ -896,6 +896,11 @@ img {
   margin: 0.75rem !important;
 }
 
+.my-2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
 .my-3 {
   margin-top: 0.75rem !important;
   margin-bottom: 0.75rem !important;
@@ -1177,10 +1182,6 @@ img {
   right: 0 !important;
 }
 
-.resize-none {
-  resize: none !important;
-}
-
 .shadow {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
 }
@@ -1243,6 +1244,12 @@ img {
   --text-opacity: 1 !important;
   color: #FF3E3E !important;
   color: rgba(255, 62, 62, var(--text-opacity)) !important;
+}
+
+.hover\:text-default:hover {
+  --text-opacity: 1 !important;
+  color: #333333 !important;
+  color: rgba(51, 51, 51, var(--text-opacity)) !important;
 }
 
 .italic {
@@ -1403,5 +1410,14 @@ img {
     transform: none;
     -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
             animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@media (min-width: 1280px) {
+
+  .xl\:hover\:text-default:hover {
+    --text-opacity: 1 !important;
+    color: #333333 !important;
+    color: rgba(51, 51, 51, var(--text-opacity)) !important;
   }
 }

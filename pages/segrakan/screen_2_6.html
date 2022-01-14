@@ -94,14 +94,7 @@
             <div class="main-header-title font-proxima-bold text-default">Portofolio Proyek Bilateral</div>
             <div class="main-header-menu main-header-menu--right">
                 <div class="main-header-menu__item border-r border-l border-soft-gray h-full">
-                    <div class="form-search form-input-group h-full">
-                        <div class="form-input-group-prepend">
-                            <div class="input-group-text border-none">
-                                <i class="bilateral-icon search"></i>
-                            </div>
-                            <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
-                        </div>
-                    </div>
+                    <div class="form-search form-input-group h-full"></div>
                 </div>
                 <div class="main-header-menu__item">
                     <div class="dropdown cursor-pointer">
@@ -263,7 +256,7 @@
                                     <div :class="`form-input-group-append ${(index === 0) ? ' border-r border-soft-gray' : ''}`">
                                         <input v-model="data.description" type="text" class="form-input"
                                                placeholder="Masukkan Keterangan">
-                                        <div class="input-group-text " v-if="index > 0" @click="addProcurement(index)">
+                                        <div class="input-group-text " v-if="index > 0" @click="removeProcurement(index)">
                                             <i class="fa fa-trash-alt text-danger"></i>
                                         </div>
                                     </div>
@@ -271,7 +264,7 @@
                             </div>
                             <div class="flex">
                                 <div class="form-note flex-1"></div>
-                                <div @click="removeProcurement"
+                                <div @click="addProcurement"
                                      class="w-24 text-right cursor-pointer text-secondary font-proxima-light">
                                     <span class="text-sm">+</span><span
                                         class="text-xs font-proxima-bold"> Tambah data</span>

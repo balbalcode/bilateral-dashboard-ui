@@ -94,14 +94,7 @@
             <div class="main-header-title font-proxima-bold text-default">Portofolio Proyek Bilateral</div>
             <div class="main-header-menu main-header-menu--right">
                 <div class="main-header-menu__item border-r border-l border-soft-gray h-full">
-                    <div class="form-search form-input-group h-full">
-                        <div class="form-input-group-prepend">
-                            <div class="input-group-text border-none">
-                                <i class="bilateral-icon search"></i>
-                            </div>
-                            <input type="text" class="form-input bg-transparent border-none" placeholder="Cari...">
-                        </div>
-                    </div>
+                    <div class="form-search form-input-group h-full"></div>
                 </div>
                 <div class="main-header-menu__item">
                     <div class="dropdown cursor-pointer">
@@ -143,17 +136,17 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <p class="form-text">Judul Proyek*</p>
-                                <input type="text" class="form-input form-input-md"
+                                <input type="text" class="form-input form-input-md" v-model="form.project_title"
                                        placeholder="Masukkan nama proyek">
                             </div>
                             <div class="form-group">
                                 <p class="form-text">Judul Proyek dalam Buku Biru*</p>
-                                <input type="text" class="form-input form-input-md"
+                                <input type="text" class="form-input form-input-md" v-model="form.project_note"
                                        placeholder="Masukkan judul proyek dalam buku biru">
                             </div>
                             <div class="form-group">
                                 <p class="form-text">Kode Proyek dalam Buku Biru*</p>
-                                <input type="text" class="form-input form-input-md"
+                                <input type="text" class="form-input form-input-md" v-model="form.project_code"
                                        placeholder="Masukkan kode proyek dalam buku biru">
                             </div>
                             <div class="form-group">
@@ -182,11 +175,11 @@
                             </div>
                             <div class="grid grid-cols-1 gap-5">
                                 <div class="form-group">
-                                    <div v-for="(data, index) in agency">
+                                    <div v-for="(data, index) in form.agency">
                                         <p v-if="index === 0" class="form-text">Implementing Agency</p>
                                         <div :class="`form-input-group-append ${(index === 0) ? ' border-r border-soft-gray' : ''}`">
                                             <input v-model="data.name" type="text" class="form-input"
-                                                   placeholder="Cari...">
+                                                   placeholder="Masukkan Agensi">
                                             <div class="input-group-text " v-if="index > 0"
                                                  @click="removeAgency(index)">
                                                 <i class="fa fa-trash-alt text-danger"></i>
@@ -218,9 +211,9 @@
                                        class="btn btn-md mr-3 btn-default hover:bg-secondary text-secondary font-proxima-bold">
                                         Sebelumnya
                                     </a>
-                                    <a href="screen_2_3.html" class="btn btn-md btn-secondary font-proxima-bold">
+                                    <button class="btn btn-md btn-secondary font-proxima-bold" @click="processPostForm">
                                         Berikutnya
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -235,25 +228,51 @@
 
 <script src="../../dist/js/components.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            agency: [{
-                name: "",
-                id: ""
-            }]
+            form: {
+                project_title: "",
+                project_note: "",
+                project_code: "",
+                // etc...
+                agency: [{
+                    name: "",
+                    id: ""
+                }]
+            }
         },
         methods: {
             addAgency() {
-                this.agency.push({
+                this.form.agency.push({
                     name: "",
                     id: ""
                 })
             },
 
             removeAgency(index) {
-                this.agency.splice(index, 1)
+                this.form.agency.splice(index, 1)
+            },
+
+
+            // this method will call in button "berikutnya" in action @click
+            processPostForm() {
+                // you can reformat the payload content before post
+                let payload = this.data
+                try {
+                    // hitring axios
+                    let data = axios.post("/url", payload)
+                    console.log(data)
+                    location.href = "./screen_2_3.html"
+                } catch (error) {
+                    // pass error here
+                    alert("gagal menyimpan data")
+                    throw error
+                }
             }
         }
     })
